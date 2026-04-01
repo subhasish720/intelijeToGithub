@@ -28,7 +28,7 @@ public class CustomerController {
         }else if(customerEntity.isFlag() == true){
             return new ResponseEntity<>("The customer data "+customerDto+" has been registered in the database successfully and the loan amount : "+customerDto.getLoan_amount()+" has been approved ", HttpStatus.CREATED);
         }else{
-            return new ResponseEntity<>("Sorry, Your loan amount has been rejected for the loan amount being greater then 300000 lakh", HttpStatus.OK);
+            return new ResponseEntity<>("Sorry, Your loan amount has been rejected for the loan amount being greater then 300000", HttpStatus.OK);
         }
     }
      @GetMapping("/api/get/{id}")
